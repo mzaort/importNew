@@ -23,6 +23,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 public class LambdaTest {
+	
+	@Test
+	public void testIntFunction() {
+		IntFunction<String[]> x = String[]::new;
+		String[] d = x.apply(10);
+		System.out.println(d.length);
+	}
 
 	@Test
 	public void testGenerateStream1() {
